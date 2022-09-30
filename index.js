@@ -36,13 +36,6 @@ const generatePDF = async (browser, urlDescriptor, requestToWaitFor) => {
       console.log(new Date().toISOString(), " --- clicked next page");
     }
 
-//    await page.waitForRequest(
-//      (request) =>
-//        request.url().startsWith(requestToWaitFor.urlStartsWith) &&
-//        request.method() === requestToWaitFor.method,
-//      { timeout: 20000 }
-//    );
-
     if (index === urlDescriptor.startPage) {
       await page.waitForTimeout(5000); // just wait a couple of seconds more
     }
@@ -61,44 +54,16 @@ const generatePDF = async (browser, urlDescriptor, requestToWaitFor) => {
 (async () => {
   const loginUrl = "https://app.edubase.ch/#promo?popup=login";
   const loginData = {
-    email: "mein benutzer",
-    password: "mein passwort",
+    email: "mein benutzer", //hier zwischen "" dein benutzer eingeben
+    password: "mein passwort", //hier zwischen "" dein passwort eingeben
   };
   const urlDescriptor = {
-   // Leadership und Kommunikation
+   // Beispiel: Leadership und Kommunikation
    //2. Auflage 2019, Seiten 344, ISBN 2000100821480
-    //base: "https://app.edubase.ch/#doc/49469/${page}", // remove at beginning of this line // for download
-	//pageIndicator: "${page}", // remove at beginning of this line // for download
-    //startPage: 1, // remove at beginning of this line // for download
-    //endPage: 344, // remove at beginning of this line // for download
-	
-   // Rechnungswesen
-   //1. Auflage 2019, Seiten 276, ISBN 2000100088418
-	//base: "https://app.edubase.ch/#doc/53570/${page}", // remove at beginning of this line // for download
-	//pageIndicator: "${page}", // remove at beginning of this line // for download
-    //startPage: 1, // remove at beginning of this line // for download
-    //endPage: 276, // remove at beginning of this line // for download
-	
-   // Marketing
-   //1. Auflage 2019, Seiten 376, ISBN 2000100088425
-	//base: "https://app.edubase.ch/#doc/53574/${page}", // remove at beginning of this line // for download
-	//pageIndicator: "${page}", // remove at beginning of this line // for download
-    //startPage: 1, // remove at beginning of this line // for download
-    //endPage: 376, // remove at beginning of this line // for download
-	
-   // Recht in der Unternehmensführung
-   //1. Auflage 2019, Seiten 280, ISBN 2000100088432
-	//base: "https://app.edubase.ch/#doc/53578/${page}", // remove at beginning of this line // for download
-	//pageIndicator: "${page}", // remove at beginning of this line // for download
-    //startPage: 1, // remove at beginning of this line // for download
-    //endPage: 280, // remove at beginning of this line // for download
-	
-   // Unternehmensführung und Organisation
-   //1. Auflage 2019, Seiten 250, ISBN 2000100091586
-	//base: "https://app.edubase.ch/#doc/56754/${page}", // remove at beginning of this line // for download
-	//pageIndicator: "${page}", // remove at beginning of this line // for download
-    //startPage: 1, // remove at beginning of this line // for download
-    //endPage: 250, // remove at beginning of this line // for download
+    base: "https://app.edubase.ch/#doc/49469/${page}",
+	pageIndicator: "${page}",
+    startPage: 1,
+    endPage: 344,
 
   };
   const requestToWaitForBeforeGeneratingPDF = {

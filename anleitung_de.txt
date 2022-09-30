@@ -1,0 +1,11 @@
+1. installieren aktuelle node software (https://nodejs.org/en/download/)
+2. die datei "index.js" mit texteditor öffnen und auf den folgenden zeilen den code anpassen:
+   - 57: zwischen den "-zeichen den benutzer login eingeben
+   - 58: zwischen den "-zeichen das passwort eingeben
+   - 62 bis 66: beim gewünschten buch die zeichen // vor den folgenden zeilen löschen:
+     - base:
+     - pageIndicator:
+     - startPage:
+     - endPage:
+3. CMD öffnen und in ordner pfad navigieren wo die datei "index.js" liegt
+4. folgenden befehl eingeben und enter drücken: node . 
