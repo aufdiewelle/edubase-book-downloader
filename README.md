@@ -1,6 +1,9 @@
 # edubase-book-downloader
 Very very basic puppeteer code that authenticates the user and navigates through a book in order to generate and store pdfs. For all that want to use proper note apps (not the f* edubase reader app).
 
+## Fork of project to solve issue 1
+I have just copy this project for solve the issue 1 at project https://github.com/AndrinGautschi/edubase-book-downloader
+
 ## How to
 1. Clone the repository
 2. navigate into the repository directory with your preferred command line tool
@@ -14,6 +17,3 @@ Very very basic puppeteer code that authenticates the user and navigates through
 
  ## Code overview for faster understanding
  The script is very simple and consists of two parts. The first part is about the login. It essentially navigates to the login page, utilizes the auto focus on the form fields to fill them and hits enter afterwards. The second part is a bit more complicated: It navigates to the page (in case of the first one by going to the url and in all other cases by hitting the next button) in a loop and generates and stores for each page a pdf of its print version (which looks quite nice).
-
-
-
